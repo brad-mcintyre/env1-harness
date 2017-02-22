@@ -1,0 +1,9 @@
+# Citrix XenDesktop Workloads variables
+# Change to suit the build environment
+
+ansible_user: administrator                                               # Ansible username
+vmwarevswitch: vxw-dvs-468-virtualwire-301-sid-5099-Pod_O_Wkload_LS       # Network Switch for XenDesktop Workloads
+ipv4subnet: 172.18.189.                                                   # IP Subnet for XenDesktop Workloads
+vmwarecustomisationspec: Vagrant Win 7 POD O Wkload                       # VMWare Custom Spec for XenDesktop Workloads
+vmwaretemplate: Templates/Win7VAGRANTCXD-GCCSJ                            # VMWare template for XenDesktop Workloads
+networkadaptername: Local Area Connection                                 # Network Adapter name for Windows 7

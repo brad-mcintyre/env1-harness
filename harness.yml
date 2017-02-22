@@ -1,0 +1,78 @@
+---
+# Finish preparing the environment for standup.
+- include: tasks/prepinventory.yml
+
+# Stand up the VM shells
+#- include: tasks/vagrantplay.yml
+
+# Apply common settings across all before commencing.
+#- include: roles/common/tasks/main.yml
+
+# Domain Controller
+#- include: roles/adds/tasks/main.yml
+
+# Syslog
+#- include: roles/syslog/tasks/main.yml
+
+# Engineering
+#- include: roles/engineering/tasks/main.yml
+
+# WSUS
+#- include: roles/wsus/tasks/main.yml
+
+# Machine CA
+#- include: roles/adcs/tasks/main.yml
+
+# AD Manager Plus
+#- include: roles/admanagerplus/tasks/main.yml
+
+# Skype for Business
+#- include: roles/lync/tasks/main.yml
+
+# Exchange
+#- include: roles/exchange/tasks/main.yml
+
+# SQL
+#- include: roles/sql/tasks/main.yml
+
+# Citrix License Server
+#- include: roles/lic/tasks/main.yml
+
+# Citrix Delivery Controller
+#- include: roles/cdc/tasks/main.yml
+
+# Citrix Studio and Director
+#- include: roles/csd/tasks/main.yml
+
+# Citrix StoreFront
+#- include: roles/csf/tasks/main.yml
+
+# Citrix Provisioning Services
+#- include: roles/cps/tasks/main.yml
+
+# File Server
+#- include: roles/fls/tasks/main.yml
+
+# Citrix GCCS-J Desktop
+#- include: roles/cxd-gccsj/tasks/main.yml
+
+# Sharepoint
+#- include: roles/sharepoint/tasks/main.yml
+
+# Nintex Forms
+#- include: roles/nintex-forms/tasks/main.yml
+
+# ICE
+#- include: roles/ice/tasks/main.yml
+
+# Citrix XenApp Desktop
+#- include: roles/cxa/tasks/main.yml
+
+# Janus Group Policies
+#- include: roles/janusgp/tasks/main.yml
+
+# Citrix Group Policies
+#- include: roles/citrix-gpo/tasks/main.yml
+
+# Create User Testing Accounts
+#- include: roles/enableuserservices/tasks/main.yml

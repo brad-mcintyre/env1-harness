@@ -1,0 +1,21 @@
+# Skype settings
+
+skypeiso: en_skype_for_business_server_2015_x64_dvd_6622058
+defaultsipdomain: sip.lab.nz
+additionalsipdomain: othersip.lab.nz
+latestsqlupdate: SQLServer2014-KB3162659-x64.exe
+skypepatchname: SkypeServerUpdateInstaller.exe
+skypedgename: podgedge
+edgesipip: 10.11.12.13
+edgewebconfip: 10.11.12.14
+edgeavip: 10.11.12.15
+#dg
+externalipaddress1: 10.119.247.10
+externalipaddress2: 10.119.247.11
+externalipaddress3: 10.119.247.12
+externalsubnetmask: 24
+externalgateway: 10.119.247.1
+externaldns: 10.119.247.10
+internalnetwork: 10.99.220.0
+internalgateway: 10.99.220.1
+internalsubnetmask: 24

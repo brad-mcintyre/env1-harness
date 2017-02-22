@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Prepare Vagrantfile
+      template: src=../templates/Vagrantfile.j2 dest=./Vagrantfile
+
+    - name: "Generate /etc/hosts.ansible file"
+      template: src=../templates/hosts.j2 dest=/etc/hosts.ansible owner=root group=root mode=0644
+      become: true
+
+    - name: "install /etc/hosts.ansible file"
+      command: "cp /etc/hosts.ansible /etc/hosts"
+      become: true

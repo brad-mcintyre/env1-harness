@@ -1,0 +1,27 @@
+# {{ ansible_managed }}
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+# Only required in the lab.
+192.168.80.132 gitlab.genesis.lab.nz
+
+# The following lines are desirable for IPv6 capable hosts.
+fe00::0     ip6-localnet
+ff00::0     ip6-mcastprefix
+ff02::1     ip6-allnodes
+ff02::2     ip6-allrouters
+
+{% for host in groups['workgroup'] %}
+{{ hostvars[host].ip|default(hostvars[host].ipv4subnet~baseip) }}  {{ host }}  {{ host }}.{{ domain }}
+{% set baseip = baseip + 1 %}
+{% endfor %}
+
+{% for host in groups['cxaworkloads'] %}
+{{ hostvars[host].ipv4subnet }}{{ CXAStartIP }}  {{ host }}  {{ host }}.{{ domain }}
+{% set CXAStartIP = CXAStartIP + 1 %}
+{% endfor %}
+
+{% for host in groups['cxdworkloads'] %}
+{{ hostvars[host].ipv4subnet }}{{ CXDStartIP }}  {{ host }}  {{ host }}.{{ domain }}
+{% set CXDStartIP = CXDStartIP + 1 %}
+{% endfor %}

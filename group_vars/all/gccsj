@@ -1,0 +1,48 @@
+agile_tempdirectory: c:\windows\temp\agileclient
+agile_zipfile: '"{{ agile_tempdirectory }}"\worldwinddata.zip'
+agile_zipdestination: C:\ProgramData\
+agile_server: gccsjserver
+agile_trustfile: trusts.jks
+agile_trustpassword: 12345
+agile_logfile: AgileInstall.log
+agile_bannerfile: LogonBanner.txt
+agile_configfile: agclt_agileclient.conf
+agile_javamemoryvalue: -J-Xmx1024m
+agile_account: INTERACTIVE
+agile_accountrights: Modify
+agile_productname: Agile Client
+agile_cacertsfile: cacerts
+agile_directxzipexe: directx_Jun2010_redist.exe
+agile_directxfolder: DirectX
+agile_directxinstaller: DXSETUP.exe
+agile_installpackage: AGCLT_4403_WIN.msi
+
+agile_comms_cop: commsCOP
+agile_fused_cop: fusedcop
+agile_cop_server: copserver
+
+
+# GCCSJ AD groups
+agile_adgroup1: copuser
+agile_adgroup2: icsfviewonly
+agile_adgroup3: icsfedit
+agile_adgroup4: icsfadmin
+agile_adgroup5: agileedit
+agile_adgroup6: agiledelete
+agile_adgroup7: agileupdate
+agile_adgroup8: VDI_Agile
+agile_adgroup9: VDI_ICSF_User
+agile_adgroup10: VDI_ICSF_PowerUser
+agile_adgroup11: VDI_ICSF_Admin
+agile_adgroup12: MC_Agile_{{ agile_cop_server }}
+agile_adgroup13: MC_ICSF_{{ agile_cop_server }}
+agile_adgroup14: GFAIConsumer
+agile_adgroup15: GFAIAdministrator
+agile_adgroup16: IntelligenceAdministrator
+agile_adgroup17: IntelligenceConsumer
+agile_adgroup18: IntelligenceProducer
+agile_adgroup19: IntelligenceSupervisor
+agile_adgroup20: IntelligenceAnalyst
+agile_adgroup21: IntelligenceWatchstander
+agile_adgroup22: JWARNUser
+agile_adgroup23: CSTSysAdm

@@ -1,0 +1,4 @@
+cpucount: 2
+memory: 16384
+vmwaretemplate: Templates/Win2012R2VagrantSQL
+sqliso: en_sql_server_2012_standard_edition_with_service_pack_2_x64_dvd_4692562

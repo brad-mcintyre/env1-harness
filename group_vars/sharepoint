@@ -1,0 +1,7 @@
+# production should 4 cores, 12GB absolute minimum as per
+# https://technet.microsoft.com/en-NZ/library/cc262485.aspx .
+# Better to have 4 core, 16gb
+# sharepoint CPU and Memory settings for dev. Mem is high because at 4GB, webservices start to fail with high mem pressure
+cpucount: 2
+memory: 8192
+vmwaretemplate: Templates/Win2012R2VagrantSQL

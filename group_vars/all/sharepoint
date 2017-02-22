@@ -1,0 +1,16 @@
+# required by sharepoint repo
+SPPassphrase: Password01
+SPAutoAdminLogon_pw: Password01
+svc_Farm_pw: Password01
+svc_Services_pw: Password01
+svc_Search_pw: Password01
+svc_SuperUser_pw: Password01
+svc_SuperReader_pw: Password01
+
+# required by sharepoint & nintex repos
+webapp: testapp
+site: testbuild
+siteUrl: https://{{ webapp }}.{{ domain }}/sites/{{ site }}
+
+# required by ICE repo
+orbat_path: ../testbuilds/TestReferenceBuild.xml

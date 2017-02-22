@@ -1,0 +1,6 @@
+# Exchange server variables
+# Change to suit the build environment
+
+vmwaretemplate: Templates/Win2012R2VagrantSQL                     # uses the SQL template which has 3 additional drives
+cpucount: 2                                                       # Sets custom CPU
+memory: 16384                                                     # Sets custom Memory

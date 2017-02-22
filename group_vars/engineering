@@ -1,0 +1,4 @@
+# Engineering server variables
+# Change to suit the build environment
+
+vmwaretemplate: Templates/Win2012R2VAGRANTCXA                   # Uses the CXA template which has a 10 GB d: drive

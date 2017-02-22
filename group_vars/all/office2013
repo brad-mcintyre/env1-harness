@@ -1,0 +1,9 @@
+# required by Office repo
+
+office_infopathgroup: Office_InfoPath_L3
+office_target_ou: "OU=Workloads"
+trustedlocations:
+  - {trustedlocation: "http://testtrusturl1.mil.nz" }
+  - {trustedlocation: "http://testtrusturl2.mil.nz"}
+
+project: "true"

@@ -1,0 +1,140 @@
+# Citrix Common Variables
+
+citrix_admingroup: Citrix_Admins                                                                      # Name of the Citrix AD Administrators Group
+citrix_admingroupdesc: Members of this group have full administrator access in the Citrix Consoles    # Description of the Citrix AD Administrators Group
+citrix_helpdeskgroup: Citrix_HelpDesk                                                                 # Name of the Citrix AD Helpdesk Group
+citrix_helpdeskgroupdesc: Members of this group have Help Desk access in the Citrix Consoles          # Description of the Citrix AD Helpdesk Group
+citrix_readonlygroup: Citrix_ReadOnly                                                                 # Name of the Citrix AD Readonly Group
+citrix_readonlygroupdesc: Members of this group have Read Only access in the Citrix Console           # Description of the Citrix AD Readonly Group
+citrix_cdciso: XenAppXenDesktop78                                                                     # Name of the XenAppXenDesktop ISO
+citrix_cpsiso: provisioningservices78                                                                 # Name of the Provisioing Services ISO
+powercli: VMware-PowerCLI-6.3.0-3737840.exe                                                           # PowerCLI install file
+
+# Licensing Variables
+
+citrix_licalias1: CTXLIC1                                                                             # DNS Alias for the first Citrix License Server
+citrix_licalias2: CTXLIC2                                                                             # DNS Alias for the second Citrix License Server
+citrix_licadmingroup: Citrix_Licensing_Admins                                                         # Name of the Citrix AD Licensing Admins Group
+citrix_licadmingroupdesc: Members of this group have full access in the Citrix Licensing Console      # Description of the Citrix AD Licensing Admins Group
+citrix_xalicensefile: XenApp_PLT_CCU_lic1.lic                                                         # Name of the XenApp license file
+citrix_xdlicensefile: XenDesktop_PLT_UD_lic2.lic                                                      # Name of the XenDesktop license file
+
+# StoreFront Variables
+
+citrix_hostbaseurl: storefront                                                                        # Name of the Storefront base URL
+citrix_farmnamexa: XAFarm                                                                             # Name of the StoreFront Farm
+citrix_farmtype: XenDesktop                                                                           # Type of StoreFront Farm
+citrix_desktopstorename: Desktop                                                                      # Name of the Desktop Store
+citrix_appstorename: Apps                                                                             # Name of the Apps Store
+citrix_mgmtstorename: Management                                                                      # Name of the Management Store
+citrix_xmlport: 80                                                                                    # XML port
+citrix_xmltransporttype: HTTP                                                                         # XML Transport type
+
+# XenApp Variables
+
+citrix_dbserverxaalias: CTXXA78SQL                                                                    # DNS Alias for the SQL server used to host the XenApp database
+citrix_xenappserviceaccount: svc_XenApp                                                               # Name of the XenApp Service Account
+citrix_xenappserviceaccountpwd: Password01                                                            # Password of the XenApp Service Account
+citrix_xenappserviceaccountdesc: Citrix XenApp Service Account. Used to access XenApp databases       # Description of the XenApp Service Account
+citrix_xasitename: XA78Site                                                                           # Name of the XenApp Site
+citrix_xadatabasenamesite: XA78DB_Site                                                                # Name of the XenApp Site database
+citrix_xadatabasenamelogging: XA78DB_Logging                                                          # Name of the XenApp Logging database
+citrix_xadatabasenamemonitor: XA78DB_Monitor                                                          # Name of the XenApp Monitoring database
+citrix_xalicenseserver_port: 27000                                                                    # XenApp license server port
+citrix_xalicenseserver_licensingmodel: Concurrent                                                     # XenApp Licencing Model
+citrix_xalicenseserver_productcode: MPS                                                               # XenApp Licensing product code
+citrix_xalicenseserver_productedition: PLT                                                            # Xenapp Licensing product edition
+citrix_xalicenseserver_addresstype: WSL                                                               # XenApp Licensing Address Type
+citrix_xalicenseserver_productversion: 7.8                                                            # XenApp Licensing Product Version
+
+#XenDesktop Variables
+
+citrix_dbserverxdalias: CTXXD78SQL                                                                    # DNS Alias for the SQL server used to host the XenDesktop database
+citrix_xendesktopserviceaccount: svc_XenDesktop                                                       # Name of the XenDesktop Service Account
+citrix_xendesktopserviceaccountpwd: Password01                                                        # Password of the XenDesktop Service Account
+citrix_xendesktopserviceaccountdesc: Citrix XenDesktop Service Account. Used to access XD databases   # Description of the XenDesktop Service Account
+citrix_xdsitename: XD78Site                                                                           # Name of the XenDesktop Site database
+citrix_xddatabasenamesite: XD78DB_Site                                                                # Name of the XenDesktop Site database
+citrix_xddatabasenamelogging: XD78DB_Logging                                                          # Name of the XenDesktop Logging database
+citrix_xddatabasenamemonitor: XD78DB_Monitor                                                          # Name of the XenDesktop Monitoring database
+citrix_xdlicenseserver_port: 27000                                                                    # XenDesktop license server port
+citrix_xdlicenseserver_licensingmodel: UserDevice                                                     # XenDesktop Licencing Model
+citrix_xdlicenseserver_productcode: XDT                                                               # XenDesktop Licensing product code
+citrix_xdlicenseserver_productedition: PLT                                                            # XenDesktop Licensing product edition
+citrix_xdlicenseserver_addresstype: WSL                                                               # XenDesktop Licensing Address Type
+citrix_xdlicenseserver_productversion: 7.8                                                            # XenDesktop Licensing Product Version
+
+# Provisioning Services Variables
+
+citrix_dbserverpvsalias: CTXPVS78SQL                                                                  # DNS Alias for the SQL server used to host the Provisioning Services database
+citrix_pvsserviceaccount: svc_Citrix_PVS                                                              # Name of the Provisioning Services Service Account
+citrix_pvsserviceaccountpwd: Password01                                                               # Password of the Provisioning Services Service Account
+citrix_pvsserviceaccountdesc: Citrix PVS Service Account. Used to access PVS db and run services      # Description of the Provisioning Services Service Account
+citrix_pvsadmingroup: Citrix_PVS_Admins                                                               # Name of the Citrix Provisioning Services Admins Group
+citrix_pvsadmingroupdesc: Members of this group have administrator access in the Citrix PVS Console   # Descritption of the Citrix Provisioning Services Admins Group
+citrix_pvsdatabasename: PVS78DB                                                                       # Name of the Provisioning Services Database
+citrix_pvsstoresize: 200                                                                              # Size of the PVS Store (D: Drive)
+citrix_pvsstorepath: D:\vdisk_stores                                                                  # Path to the PVS store
+citrix_pvsfarmname: PVSFarm                                                                           # Name of the Provisioning Services Farm
+citrix_pvssitename: Site1                                                                             # Name of the Provisioning Services Site
+citrix_pvscollectionname1: Maintenance                                                                # Name of device collection
+citrix_pvscollectionname2: HSD - Management                                                           # Name of device collection
+citrix_pvscollectionname3: HSD - Production                                                           # Name of device collection
+citrix_pvscollectionname4: HSD - Testing                                                              # Name of device collection
+citrix_pvscollectionname5: CXD - GCCSJ                                                                # Name of device collection
+citrix_pvsstore1: Staging                                                                             # Name of vDisk store
+citrix_pvsstore2: HSD - Production                                                                    # Name of vDisk store
+citrix_pvsstore3: HSD - Management                                                                    # Name of vDisk store
+citrix_pvsstore4: CXD - GCCSJ                                                                         # Name of vDisk store
+citrix_bootstrapname: ARDBP32.BIN                                                                     # Name of bootstrap file used by PXE
+citrix_bootstrapport: 6910                                                                            # Bootstrap port
+citrix_dhcpscopename: PVS                                                                             # DHCP scope name used by Provisioning services
+citrix_dhcpstartip: 20                                                                                # DHCP scope start IP
+citrix_dhcpendip: 99                                                                                  # DHCP scope end IP
+
+# XenApp Desktop Variables
+
+citrix_cxapagefilesize: 4096                                                                          # XenApp desktop pagefile size
+citrix_cxaipreservation: 20                                                                           # IP reservation for XenApp build VM
+citrix_cxavdisksize: 55000                                                                            # XenApp desktop disk size (c: drive)
+citrix_cxavhdblocksize: 2048                                                                          # place holder not used
+citrix_cxavdiskname: 2012CXA                                                                          # Name of Base XenApp desktop image
+citrix_hsdvdiskname: 2012CXA_HSD                                                                      # Name of HSD XenApp desktop image (Default user desktop)
+citrix_mgmtvdiskname: 2012CXA_MGMT                                                                    # Name of management XenApp desktop image
+citrix_cxaworkloadou: XenApp                                                                          # AD ou used for XenApp workload VMs
+citrix_cxastartvm_hsd: 301                                                                            # XenApp HSD workload starting number
+citrix_cxastartvm_maint: 101                                                                          # XenApp Maintenance workload starting number
+citrix_cxastartvm_mgmt: 201                                                                           # XenApp management workload starting number
+citrix_cxatotalvm_hsd: 2                                                                              # Total number of HSD workload VMs
+citrix_cxatotalvm_Maint: 2                                                                            # Total number of Maintenance workload VMs
+citrix_cxatotalvm_mgmt: 2                                                                             # Total number of management workload VMs
+citrix_cxatemplatename: CXAHSDTemplate                                                                # XenApp VMWare templace name
+citrix_cxaworkloadprefix: CXA                                                                         # XenApp workload prefix
+citrix_cxastartip: 20                                                                                 # XenApp workload start IP
+citrix_catalogname_hsd: HSD 2012                                                                      # HSD machine Catalog name
+citrix_catalogname_mgmt: HSD Management                                                               # MGMT machine catalog name
+citrix_deliverygroup_hsd: HSD                                                                         # HSD delivery group name
+citrix_deliverygroup_mgmt: HSD                                                                        # MGMT delivery group name
+citrix_groupname_hsddesktop: Citrix_HSD_Desktop                                                       # HSD Desktop AD group name
+citrix_groupdesc_hsddesktop: Provides access to the Citrix Hosted Shared Desktop                      # HSD Desktop AD group description
+citrix_hsd_deliverytype: DesktopsOnly                                                                 # HSD delivery group type
+citrix_hsd_desktopkind: Shared                                                                        # HSD delivery group kind
+citrix_hsd_colourdepth: TwentyFourBit                                                                 # HSD delivery group colour depth
+citrix_hsd_functionallevel: L7_8                                                                      # HSD delivery group functional level
+citrix_hsd_sessionsupport: MultiSession                                                               # HSD delivery group session support
+citrix_hsd_timezone: New Zealand Standard Time                                                        # HSD delivery group timezone
+citrix_hsd_offpeakbuffer: 10                                                                          # HSD delivery group off peak buffer
+citrix_hsd_peakbuffer: 10                                                                             # HSD delivery group peak buffer
+
+# GCCSJ XenDesktop Desktop Variables
+
+citrix_cxdpagefilesize: 5000                                                                          # XenDesktop desktop pagefile size
+citrix_cxdipreservation: 21                                                                           # IP reservation for XenDesktop build VM
+citrix_cxdvdisksize: 88000                                                                            # XenApp desktop disk size (c: drive)
+citrix_gccsjvdiskname: WIN7CXD_GCCSJ                                                                  # Name of GCCSJ XenDesktop desktop image
+citrix_cxdworkloadou: XenDesktop                                                                      # AD ou used for XenDesktop workload VMs
+citrix_cxdstartvm_gccsj: 101                                                                          # XenDesktop GCCSJ workload starting number
+citrix_cxdtotalvm_gccsj: 5                                                                            # Total number of GCCSJ workload VMs
+citrix_cxdgccsjtemplatename: CXDGCCSJTemplate                                                         # XenDesktop GCCSJ VMWare template name
+citrix_cxdworkloadprefix: CXD                                                                         # XenDesktop workload prefix
+citrix_cxdstartip: 21                                                                                 # XenApp workload start IP

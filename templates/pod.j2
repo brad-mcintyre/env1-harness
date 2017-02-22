@@ -1,0 +1,9 @@
+[localhost]
+localhost ansible_connection=local
+
+###################
+# Domain Controller
+###################
+
+[domcontrolwg]
+{{ serverprefix }}{{ location }}AD ip={{ ipv4subnet }}10

@@ -1,0 +1,13 @@
+# Make the folder (if it doesn't exist)
+mkdir -p {{ keytabsfolder }}
+
+# Generate the keytab file
+{ echo "addent -password -p administrator@"{{ domain|upper }}" -k 1 -e RC4-HMAC";
+  sleep 1;
+  echo "{{ ansible_password }}";
+  sleep 1;
+  echo "wkt {{ keytabsfolder }}/administrator-"{{ domain|upper }}".keytab";
+} | ktutil
+
+# Finally, set the Jenkins user as the owner of the file.
+sudo chown jenkins {{ keytabsfolder }}/administrator-"{{ domain|upper }}".keytab

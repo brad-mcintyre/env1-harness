@@ -1,0 +1,3 @@
+vmwaretemplate: Templates/Win2012R2VagrantSQL
+cpucount: 2
+memory: 16384

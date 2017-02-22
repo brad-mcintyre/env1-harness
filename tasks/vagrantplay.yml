@@ -1,0 +1,30 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Vagrant up
+      become: true
+      become_user: "root"
+      become_method: "sudo"
+      shell: "vagrant up --provider=vsphere"
+
+- hosts: workgroup, cxaworkloads, cxdworkloads
+  name: Computers being prepared for Ansible
+  gather_facts: no
+  tasks:
+    - name: Wait for WinRM port
+      local_action:
+        module: wait_for
+        host: "{{ inventory_hostname }}"
+        port: 5985
+        delay: 90
+        timeout: 6000
+        state: started
+
+    - name: Wait for WinRM secure port
+      local_action:
+        module: wait_for
+        host: "{{ inventory_hostname }}"
+        port: 5986
+        delay: 15
+        timeout: 300
+        state: started

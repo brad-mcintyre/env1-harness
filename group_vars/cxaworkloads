@@ -1,0 +1,9 @@
+# Citrix XenApp Workloads variables
+# Change to suit the build environment
+
+
+ansible_user: administrator                                             # Ansible username
+vmwarevswitch: vxw-dvs-468-virtualwire-301-sid-5099-Pod_O_Wkload_LS     # Network Switch for XenApp Workloads
+ipv4subnet: 172.18.189.                                                 # IP Subnet for XenApp Workloads
+vmwarecustomisationspec: Vagrant 2012 R2 POD O Wkload                   # VMWare Custom Spec for XenApp Workloads
+vmwaretemplate: Templates/Win2012R2VAGRANTCXA                           # VMWare template for XenApp Workloads

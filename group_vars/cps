@@ -1,0 +1,7 @@
+# Citrix Provisioning server variables
+# Change to suit the build environment
+
+vmwarevswitch: vxw-dvs-468-virtualwire-301-sid-5099-Pod_O_Wkload_LS   # Network Switch for Provisioning Services Servers
+#ipv4subnet: 172.18.189.                                               # IP Subnet for Provisioning Services Servers
+vmwarecustomisationspec: Vagrant 2012 R2 POD O Wkload                 # VMWare Custom Spec for Provisioning Services Servers
+vmwaretemplate: Templates/Win2012R2VAGRANTCPS                         # VMWare template for Provisioning Services Servers

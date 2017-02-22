@@ -1,0 +1,23 @@
+[localhost]
+localhost ansible_connection=local
+
+
+
+#####################################
+# Citrix XenApp Desktop
+#####################################
+
+[cxdwg]
+{{ domainnetbios|lower }}cxd00
+
+[cxdad]
+{{ domainnetbios|lower }}cxd00.{{ domain|lower }}
+
+[cxdworkloads:children]
+cxdwg
+
+[workgroup:children]
+
+[domain:children]
+
+[cxaworkloads:children]

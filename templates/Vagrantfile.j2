@@ -1,0 +1,141 @@
+Vagrant.configure('2') do |config|
+{% for host in groups['workgroup'] %}
+  config.vm.define '{{ host }}' do |node_config|
+    # Except the IP it seems....
+    node_config.vm.network 'private_network',
+                            ip: '{{ hostvars[host].ip|default(hostvars[host].ipv4subnet ~ baseip) }}',
+
+                            # The information in the network section below here is
+                            # overwritten by the VMware customisation process and
+                            # so is deliberately bogus.
+                            netmask: '255.255.255.0',
+                            gateway: '192.168.1.1',
+                            dns_server_list: ['192.168.1.2','192.168.1.3'],
+                            autoconfig: false
+    # End of bogus information.
+
+    node_config.vm.box = 'vsphere'
+    node_config.vm.box_url = '/var/vagrant/genesis.box'
+    node_config.vm.boot_timeout = 5400
+    node_config.vm.provider :vsphere do |vsphere, config|
+      vsphere.host = '{{ hostvars[host].vcenterip }}'
+      vsphere.compute_resource_name = '{{ hostvars[host].vcenterclustername }}'
+      vsphere.template_name = '{{ hostvars[host].vmwaretemplate }}'
+      vsphere.name = '{{ host }}'
+      vsphere.vm_base_path = '{{ hostvars[host].domainnetbios|lower }}'
+      vsphere.data_store_name = '{{ hostvars[host].vmwaredatastore }}'
+      vsphere.vlan = '{{ hostvars[host].vmwarevswitch }}'
+      vsphere.customization_spec_name = '{{ hostvars[host].vmwarecustomisationspec }}'
+      vsphere.cpu_count = '{{ hostvars[host].cpucount }}'
+      vsphere.memory_mb = '{{ hostvars[host].memory }}'
+      vsphere.user = '{{ hostvars[host].vcenteruser }}'
+      vsphere.password = '{{ hostvars[host].vcenterpassword }}'
+      vsphere.insecure = true # If we ever get signed certs on vCenter, change to false
+      vsphere.notes = 'Packer, Vagrant created Guest'
+      config.vm.synced_folder '.', '/vagrant', disabled: true
+
+      # Vagrant SSH connection setting:
+      config.ssh.pty = false
+      config.ssh.username = 'vagrant'
+      config.ssh.password = 'vagrant'
+      config.ssh.insert_key = true
+    end
+    config.vm.provider 'vmware' do |v|
+      v.gui = true
+    end
+  end
+{% set baseip = baseip + 1 %}
+{% endfor %}
+
+{% for host in groups['cxaworkloads'] %}
+  config.vm.define '{{ host }}' do |node_config|
+    # The information in the network section here is overwritten by the VMware
+    # customisation process and so is deliberately bogus.
+    # Except the IP it seems....
+    node_config.vm.network 'private_network',
+                            ip: '{{ hostvars[host].ipv4subnet }}{{ CXAStartIP }}',
+                            netmask: '255.255.255.0',
+                            gateway: '192.168.1.1',
+                            dns_server_list: ['192.168.1.2','192.168.1.3'],
+                            autoconfig: false
+    # End of bogus information.
+
+    node_config.vm.box = 'vsphere'
+    node_config.vm.box_url = '/var/vagrant/genesis.box'
+    node_config.vm.boot_timeout = 5400
+    node_config.vm.provider :vsphere do |vsphere, config|
+      vsphere.host = '{{ hostvars[host].vcenterip }}'
+      vsphere.compute_resource_name = '{{ hostvars[host].vcenterclustername }}'
+      vsphere.template_name = '{{ hostvars[host].vmwaretemplate }}'
+      vsphere.name = '{{ host }}'
+      vsphere.vm_base_path = '{{ hostvars[host].domainnetbios|lower }}'
+      vsphere.data_store_name = '{{ hostvars[host].vmwaredatastore }}'
+      vsphere.vlan = '{{ hostvars[host].vmwarevswitch }}'
+      vsphere.customization_spec_name = '{{ hostvars[host].vmwarecustomisationspec }}'
+      vsphere.cpu_count = '{{ hostvars[host].cpucount }}'
+      vsphere.memory_mb = '{{ hostvars[host].memory }}'
+      vsphere.user = '{{ hostvars[host].vcenteruser }}'
+      vsphere.password = '{{ hostvars[host].vcenterpassword }}'
+      vsphere.insecure = true # If we ever get signed certs on vCenter, change to false
+      vsphere.notes = 'Packer, Vagrant created Guest'
+      config.vm.synced_folder '.', '/vagrant', disabled: true
+
+      # Vagrant SSH connection setting:
+      config.ssh.pty = false
+      config.ssh.username = 'vagrant'
+      config.ssh.password = 'vagrant'
+      config.ssh.insert_key = true
+    end
+    config.vm.provider 'vmware' do |v|
+    v.gui = true
+    end
+  end
+{% set CXAStartIP = CXAStartIP + 1 %}
+{% endfor %}
+
+{% for host in groups['cxdworkloads'] %}
+  config.vm.define '{{ host }}' do |node_config|
+    # The information in the network section here is overwritten by the VMware
+    # customisation process and so is deliberately bogus.
+    # Except the IP it seems....
+    node_config.vm.network 'private_network',
+                            ip: '{{ hostvars[host].ipv4subnet }}{{ CXDStartIP }}',
+                            netmask: '255.255.255.0',
+                            gateway: '192.168.1.1',
+                            dns_server_list: ['192.168.1.2','192.168.1.3'],
+                            autoconfig: false
+    # End of bogus information.
+
+    node_config.vm.box = 'vsphere'
+    node_config.vm.box_url = '/var/vagrant/genesis.box'
+    node_config.vm.boot_timeout = 5400
+    node_config.vm.provider :vsphere do |vsphere, config|
+      vsphere.host = '{{ hostvars[host].vcenterip }}'
+      vsphere.compute_resource_name = '{{ hostvars[host].vcenterclustername }}'
+      vsphere.template_name = '{{ hostvars[host].vmwaretemplate }}'
+      vsphere.name = '{{ host }}'
+      vsphere.vm_base_path = '{{ hostvars[host].domainnetbios|lower }}'
+      vsphere.data_store_name = '{{ hostvars[host].vmwaredatastore }}'
+      vsphere.vlan = '{{ hostvars[host].vmwarevswitch }}'
+      vsphere.customization_spec_name = '{{ hostvars[host].vmwarecustomisationspec }}'
+      vsphere.cpu_count = '{{ hostvars[host].cpucount }}'
+      vsphere.memory_mb = '{{ hostvars[host].memory }}'
+      vsphere.user = '{{ hostvars[host].vcenteruser }}'
+      vsphere.password = '{{ hostvars[host].vcenterpassword }}'
+      vsphere.insecure = true # If we ever get signed certs on vCenter, change to false
+      vsphere.notes = 'Packer, Vagrant created Guest'
+      config.vm.synced_folder '.', '/vagrant', disabled: true
+
+      # Vagrant SSH connection setting:
+      config.ssh.pty = false
+      config.ssh.username = 'vagrant'
+      config.ssh.password = 'vagrant'
+      config.ssh.insert_key = true
+    end
+    config.vm.provider 'vmware' do |v|
+    v.gui = true
+    end
+  end
+{% set CXDStartIP = CXDStartIP + 1 %}
+{% endfor %}
+end

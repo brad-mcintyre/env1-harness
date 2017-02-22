@@ -1,0 +1,5 @@
+# Exchange settings
+
+exchangemediapath: c:\windows\temp\exchange2013\cu13 # Path on server for media - gets burned into xml file
+latest2013media: exchange2013-x64-cu13.exe #This is the latest Exchange release
+defaultsmtpdomain: sip.lab.nz # gets burned into xml
