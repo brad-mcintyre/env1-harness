@@ -11,14 +11,14 @@
     - name: Setup keytab file
       become: true
       shell: "../tasks/keytab.sh"
-    
-    # - name: Prepare Kerberos realm configuration
-    #   template: src=../templates/krb5.conf.j2 dest=/etc/krb5.conf.ansible mode=0644 owner=root group=root
-    #   become: true
-    #
-    # - name: Set Kerberos realm configuration
-    #   command: "cp /etc/krb5.conf.ansible /etc/krb5.conf"
-    #   become: true
-    #
-    # - name: Create the keytabs folder
-    #   file: path={{ keytabsfolder }} state=directory mode=0755
+
+    - name: Prepare Kerberos realm configuration
+      template: src=../templates/krb5.conf.j2 dest=/etc/krb5.conf.ansible mode=0644 owner=root group=root
+      become: true
+
+   - name: Set Kerberos realm configuration
+     command: "cp /etc/krb5.conf.ansible /etc/krb5.conf"
+     become: true
+
+   - name: Create the keytabs folder
+     file: path=/tmp/keytabs state=directory mode=0755
