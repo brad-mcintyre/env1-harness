@@ -8,10 +8,10 @@
     - name: Prepare Keytab file
       template: src=../templates/keytab.sh.j2 dest=../tasks/keytab.sh mode=0744
 
-    # - name: Setup keytab file
-    #   become: true
-    #   shell: "../tasks/keytab.sh"
-    #
+    - name: Setup keytab file
+      become: true
+      shell: "../tasks/keytab.sh"
+    
     # - name: Prepare Kerberos realm configuration
     #   template: src=../templates/krb5.conf.j2 dest=/etc/krb5.conf.ansible mode=0644 owner=root group=root
     #   become: true
