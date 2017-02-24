@@ -1,5 +1,8 @@
 ---
 - hosts: localhost
+
+  include_vars:
+    dir: 'group_vars/all'
   tasks:
     - name: Prepare Vagrantfile
       template: src=../templates/Vagrantfile.j2 dest=./Vagrantfile
