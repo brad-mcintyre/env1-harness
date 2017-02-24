@@ -3,7 +3,7 @@
 
   tasks:
     - include_vars:
-        dir: 'group_vars/all'
+        dir: '../group_vars/all'
     - name: Prepare Vagrantfile
       template: src=../templates/Vagrantfile.j2 dest=./Vagrantfile
 
