@@ -10,13 +10,14 @@
  renew_lifetime = 7d
  forwardable = true
  rdns = false
- default_realm = ENV1.LAB.NZ
+ default_realm = ENV1.LAB.COM
  #default_ccache_name = KEYRING:persistent:%{uid}
 
 [realms]
         ENV1.LAB.NZ   = {
-                kdc = AD.ENV1.LAB.NZ
-                default_domain = ENV1
+                kdc = ad.env1.lab.com
+                admin_server = ad.env1.lab.com
         }
 [domain_realm]
-        ENV1 = ENV1.LAB.NZ  
+        .env1.lab.com = ENV1.LAB.COM
+        env1.lab.com = ENV1.LAB.COM
