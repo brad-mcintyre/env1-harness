@@ -9,7 +9,7 @@
 #- include: roles/common/tasks/main.yml
 
 # Domain Controller
-#- include: roles/adds/tasks/main.yml
+- include: roles/adds/tasks/main.yml
 
 # Syslog
 #- include: roles/syslog/tasks/main.yml
@@ -39,7 +39,7 @@
 #- include: roles/lic/tasks/main.yml
 
 # Citrix Delivery Controller
-#- include: roles/cdc/tasks/main.yml
+- include: roles/cdc/tasks/main.yml
 
 # Citrix Studio and Director
 #- include: roles/csd/tasks/main.yml
