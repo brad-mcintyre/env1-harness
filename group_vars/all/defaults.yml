@@ -1,14 +1,14 @@
 # Default CPU and Memory settings
-cpucount = 1                                                               # Default CPU count for Vagrant
-memory = 2048                                                              # Default memory size for Vagrant
+cpucount: 1                                                               # Default CPU count for Vagrant
+memory: 2048                                                              # Default memory size for Vagrant
 
 # Should remain largely static.
 
-keytabsfolder = /tmp/keytabs                                               # Location containing keytab file for environment (no trailing slash)
-ansible_connection = winrm                                                 # Default connection type
-ansible_winrm_transport = plaintext                                        # Default winrm transport type
-ansible_port = 5986                                                        # Default ansible port
-ansible_winrm_server_cert_validation = ignore                              # Use when self-signed certificates
-ansible_winrm_kerberos_delegation = true                                   # Allow kerberos double hopping
-ansible_winrm_operation_timeout_sec = 6000
-ansible_winrm_read_timeout_sec = 21600
+keytabsfolder: /tmp/keytabs                                               # Location containing keytab file for environment (no trailing slash)
+ansible_connection: winrm                                                 # Default connection type
+ansible_winrm_transport: plaintext                                        # Default winrm transport type
+ansible_port: 5986                                                        # Default ansible port
+ansible_winrm_server_cert_validation: ignore                              # Use when self-signed certificates
+ansible_winrm_kerberos_delegation: true                                   # Allow kerberos double hopping
+ansible_winrm_operation_timeout_sec: 6000
+ansible_winrm_read_timeout_sec: 21600
