@@ -2,10 +2,8 @@
 - hosts: localhost
 
   tasks:
-    - include_vars:
-        dir: '../group_vars/all'
-    - name: Prepare Vagrantfile
-      template: src=../templates/Vagrantfile.j2 dest=./Vagrantfile
+    #- name: Prepare Vagrantfile
+    #  template: src=../templates/Vagrantfile.j2 dest=./Vagrantfile
 
     - name: "Generate /etc/hosts.ansible file"
       template: src=../templates/hosts.j2 dest=/etc/hosts.ansible owner=root group=root mode=0644
