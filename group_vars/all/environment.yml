@@ -2,9 +2,9 @@
 # Environment Configuration
 # Adjust to suit the target environment.
 #########################################
-domain: ENV1.LAB.NZ                                                       # Set the FQDN of the domain
+domain: ENV1.LAB.COM                                                       # Set the FQDN of the domain
 domainnetbios: ENV1                                                       # NetBIOS name of the domain
-ansible_user: administrator@ENV1.LAB.NZ                                   # Local administrator account in the domain
+ansible_user: administrator@ENV1.LAB.COM                                   # Local administrator account in the domain
 ansible_password: Password01                                              # Ansile password used to access a box during the build phase.
 mediasource: 172.17.132.143                                               # IP address of the local Genesis box
 mediauser: bradm                                                          # User ID allowed to access samba share on Genesis box
