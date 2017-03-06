@@ -2,12 +2,12 @@
 mkdir -p /tmp/keytabs
 
 # Generate the keytab file
-{ echo "addent -password -p administrator@ENV1.LAB.NZ -k 1 -e RC4-HMAC";
+{ echo "addent -password -p administrator@ENV1.LAB.COM -k 1 -e RC4-HMAC";
   sleep 1;
   echo Password01;
   sleep 1;
-  echo "wkt  /tmp/keytabs/administrator-ENV1.LAB.NZ.keytab";
+  echo "wkt  /tmp/keytabs/administrator-ENV1.LAB.COM.keytab";
 } | ktutil
 
 # Finally, set the Jenkins user as the owner of the file.
-sudo chown gitlab  /tmp/keytabs/administrator-ENV1.LAB.NZ.keytab
+sudo chown gitlab  /tmp/keytabs/administrator-ENV1.LAB.COM.keytab
